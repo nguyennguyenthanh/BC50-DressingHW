@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CyberLearn Dressing Room</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="text-center">
+              <img src="./../assets/images/cybersoft.png" alt="Card image" />
+            </div>
+
+            <div class="card-body">
+              <h4 class="card-title text-center">
+                CyberLearn - Học lập trình trực tuyến - Dự án thử đồ trực tuyến
+                - Virtual Dressing Room
+              </h4>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <ul id="nav-button" class="nav nav-pills">
+            <li>
+              <!-- đặt tên param 'ao' gọi hàm để khai báo bên file main -->
+              <button onclick="btnChose('ao')" class="btn btn-info" style="width: 124px;">Áo</button>
+            </li>
+            <li>
+              <button onclick="btnChose('quan')" class="btn btn-info" style="width: 124px;">Quần</button>
+            </li>
+            <li>
+              <button onclick="btnChose('giay dep')" class="btn btn-info" style="width: 124px;">Giày Dép</button>
+            </li>
+            <li>
+              <button onclick="btnChose('tui xach')" class="btn btn-info" style="width: 124px;">Túi Xách</button>
+            </li>
+            <li>
+              <button onclick="btnChose('day chuyen')" class="btn btn-info" style="width: 124px;">Dây Chuyền</button>
+            </li>
+            <li>
+              <button onclick="btnChose('kieu toc')" class="btn btn-info" style="width: 124px;">Kiểu Tóc</button>
+            </li>
+            <li>
+              <button onclick="btnChose('nen')" class="btn btn-info" style="width: 124px;">Nền</button>
+            </li>
+          </ul>
+          
+          <div class="well">
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="container">
+                  <div id="loopCloth" class="row text-center"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contain">
+            <div class="body">
+              <img id="thuao" style="display: none;" src="./../assets/images/clothes/botcloth1.png" alt="" width="100%">
+            </div>
+            <div class="model">
+              <img style="display: none;" src="./../assets/images/model/1000.png" alt="" width="100%" height="100%">
+            </div>
+            <div class="hairstyle">
+              <img style="display: none;" src="./../assets/images/hairstyle/hairstyle1.png" alt="" width="110%" height="140%" >
+            </div>
+            <div class="necklace">
+              <img style="display: none;" src="./../assets/images/necklaces/necklace1.png" alt="">
+            </div>
+            <div class="bikinibottom"></div>
+            <div class="bikinitop">
+              <img style="display: none;" src="./../assets/images/clothes/topcloth1.png" alt="" width="100%">
+            </div>            
+            <div class="handbag">
+              <img style="display: none;" src="./../assets/images/handbags/handbag1.png" alt="">
+            </div>
+            <div class="feet">
+              <img style="display: none;" src="./../assets/images/shoes/shoes2.png" alt="">
+            </div>
+            <div class="background">
+              <img style="display: none;" src="./../assets/images/background/background3.jpg" alt="" width="100%" height="100%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- MAIN JS -->
+    <script type="module" src="./../controllers/main.js"></script>
+  </body>
+</html>
