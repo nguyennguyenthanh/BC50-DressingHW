@@ -10,7 +10,7 @@ const renderUIClothes = (type) => {
     <div class ="col-sm-3">
       <img src="${product.imgSrc_png}"  alt="Ao" width="120px" height="250px">
       <p>${product.name}</p>
-      <button class="btn btn-success onclick="btnTry('${product.id}')">Thử</button>
+      <button class="btn btn-success" onclick="btnTry('${product.id}')">Thử</button>
     </div>
   `
   });
@@ -61,14 +61,13 @@ window.btnChose = btnChose;
 /***
  * Thử Hàng
  */
-function btnTry(id){
-  console.log(id);
+function btnTry(id,srcImage) {
+  document.getElementsByClassName("trycloth")[0].style.display = "block";
+  const changeSrc = document.getElementsByClassName("trycloth");
+  const arrProduct = Data.tabPanes.find(product => product.id === id);
+  changeSrc.src = arrProduct.imgSrc_png;
+  renderUIClothes();
 }
 window.btnTry = btnTry;
 
-
-// let thuao = getEle("thuao").value;
-//   console.log(thuao);
-//   getEle("thuao").style.display = "block";
-//   thuao.src = "../assets/images/clothes/topcloth2.png";
-//   renderUIClothes();
+// đổi tên class giống nhau hết,display theo thứ tự class, truyền param (class,product.type)
