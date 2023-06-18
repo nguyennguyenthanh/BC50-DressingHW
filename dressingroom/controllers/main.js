@@ -61,13 +61,47 @@ window.btnChose = btnChose;
 /***
  * Thử Hàng
  */
-function btnTry(id,srcImage) {
-  document.getElementsByClassName("trycloth")[0].style.display = "block";
-  const changeSrc = document.getElementsByClassName("trycloth");
-  const arrProduct = Data.tabPanes.find(product => product.id === id);
-  changeSrc.src = arrProduct.imgSrc_png;
-  renderUIClothes();
+function  btnTry(id) {
+  // 1. Find product clicked
+   const productClicked = Data.tabPanes.find(product => product.id === id); 
+  // 2. Change src
+  if (productClicked.type === "topclothes") {
+    let topclothesHTML = "";
+    topclothesHTML += `<img src="${productClicked.imgSrc_png}" width="100%" height="100%"/>`;
+    document.getElementsByClassName("bikinitop")[0].innerHTML = topclothesHTML;
+  }
+  if (productClicked.type === "botclothes") {
+    let botclothesHTML = "";
+    botclothesHTML += `<img src="${productClicked.imgSrc_png}" width="100%" height="100%"/>`;
+    document.getElementsByClassName("bikinibottom")[0].innerHTML = botclothesHTML;
+  }
+  if (productClicked.type === "shoes") {
+    let shoesHTML = "";
+    shoesHTML += `<img src="${productClicked.imgSrc_png}" width="100%" height="100%"/>`;
+    document.getElementsByClassName("feet")[0].innerHTML = shoesHTML;
+  }
+  if (productClicked.type === "handbags") {
+    let handbagsHTML = "";
+    handbagsHTML += `<img src="${productClicked.imgSrc_png}" width="100%" height="100%"/>`;
+    document.getElementsByClassName("handbag")[0].innerHTML = handbagsHTML;
+  }
+  if (productClicked.type === "necklaces") {
+    let necklacesHTML = "";
+    necklacesHTML += `<img src="${productClicked.imgSrc_png}" width="100%" height="100%"/>`;
+    document.getElementsByClassName("necklace")[0].innerHTML = necklacesHTML;
+  }
+  if (productClicked.type === "hairstyle") {
+    let hairstyleHTML = "";
+    hairstyleHTML += `<img src="${productClicked.imgSrc_png}" width="110%" height="155%"/>`;
+    document.getElementsByClassName("hairstyle")[0].innerHTML = hairstyleHTML;
+  }
+  if (productClicked.type === "background") {
+    let backgroundHTML = "";
+    backgroundHTML += `<img src="${productClicked.imgSrc_png}" width="100%" height="100%"/>`;
+    document.getElementsByClassName("background")[0].innerHTML = backgroundHTML;
+  }
 }
 window.btnTry = btnTry;
+
 
 // đổi tên class giống nhau hết,display theo thứ tự class, truyền param (class,product.type)
